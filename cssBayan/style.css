@@ -21,7 +21,7 @@ hr {
 
 /* The whole bayan and its behavior */
 #bayan {
-  margin: 5%;
+  margin: 1%;
   border: 2px black solid;
   border-radius: 20px;
   color: black;
@@ -91,4 +91,8 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.text {
+  width: 90%;
 }
