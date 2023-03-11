@@ -11,12 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-}
-
-hr {
-  width: 99%;
-  color: black;
 }
 
 /* The whole bayan and its behavior */
@@ -26,16 +20,16 @@ hr {
   border-radius: 20px;
   color: black;
   max-width: 600px;
-}
 
-#bayan {
   opacity: 0.5;
   transition: 400ms;
 }
+
 #bayan > .part > .text-and-icon > .icon {
   opacity: 0;
   transition: 0.4s;
 }
+
 #bayan:hover,
 #bayan:hover > .part > .text-and-icon > .icon {
   opacity: 1;
@@ -53,9 +47,11 @@ hr {
 
 /* Meme behavior */
 .part > .meme {
+  align-self: center;
   margin: 1%;
-  width: 0%;
   border-radius: 30px;
+
+  width: 0%;
   transition: width 400ms;
 }
 
@@ -67,6 +63,14 @@ hr {
 
 /* Icon behavior and appearance */
 .part > .text-and-icon > .icon {
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  flex-shrink: 0;
+
   transition: transform 0.4s;
 }
 
@@ -76,23 +80,10 @@ hr {
   transition: transform 0.4s;
 }
 
-.icon {
-  font-size: 20px;
-  width: 25px;
-  height: 25px;
-  border: 2px solid black;
-  border-radius: 15px;
-  text-align: center;
-}
-
 /* properties of div which holds text and icon */
 .text-and-icon {
   margin: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.text {
-  width: 90%;
 }
