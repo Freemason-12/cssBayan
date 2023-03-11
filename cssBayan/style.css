@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Golos+Text");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Golos Text", serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The whole bayan and its behavior */
+#bayan {
+  margin: 1%;
+  border: 2px black solid;
+  border-radius: 20px;
+  color: black;
+  max-width: 600px;
+
+  opacity: 0.5;
+  transition: 400ms;
+}
+
+#bayan > .part > .text-and-icon > .icon {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#bayan:hover,
+#bayan:hover > .part > .text-and-icon > .icon {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+/* Each part of the bayan */
+.part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 2%;
+}
+
+/* Meme behavior */
+.part > .meme {
+  align-self: center;
+  margin: 1%;
+  border-radius: 30px;
+
+  width: 0%;
+  transition: width 400ms;
+}
+
+.part:hover > .meme,
+.part:focus > .meme {
+  width: 60%;
+  transition: width 400ms;
+}
+
+/* Icon behavior and appearance */
+.part > .text-and-icon > .icon {
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  flex-shrink: 0;
+
+  transition: transform 0.4s;
+}
+
+.part:focus > .text-and-icon > .icon,
+.part:hover > .text-and-icon > .icon {
+  transform: rotate(45deg);
+  transition: transform 0.4s;
+}
+
+/* properties of div which holds text and icon */
+.text-and-icon {
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
